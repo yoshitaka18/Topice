@@ -1,0 +1,15 @@
+<section class="main-header">
+  <p class="flash"><%= notice %><%= alert %></p>
+  <img src="<%= asset_path "top_image.png" %>">
+</section>
+<% flash.each do |name, msg| %>
+  <div class="alert alert-<%= name %>">
+    <%= msg %>
+  </div>
+<% end %>
+<section class="about">
+  <h1>About PictaGram</h1>
+  <p>
+     画像投稿サイトです
+  </p>
+</section>
