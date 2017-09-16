@@ -4,7 +4,9 @@
       <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
         <%= link_to profile_img(user), user_path(user),:class => "card-img-top", :alt => "Card image cap" %>
         <%= user.email %>
-        <%= render 'follow_form', user: user %>
+        <% if user.id != current_user.id %>
+          <%= render 'follow_form', user: user %>
+        <% end %>
       </div>
   <% end %>
 </div>
