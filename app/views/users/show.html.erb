@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">  
+    <h2>ユーザー詳細(<%= @user.name %>)</h2>
+  </div>
+
+  <div class = "row">
+    <h3>フォロー一覧</h3>
+    <%= render partial: 'users/follow_index', locals: { users: @user.followed_users } %>
+  </div>
+
+  <div class = "row">
+    <h3>フォロワー一覧</h3>
+    <%= render partial: 'users/follow_index', locals: { users: @user.followers.each } %>
+  </div>
+  <br>
+  <%= link_to 'ユーザー一覧へ戻る', users_path if user_signed_in? %>
+</div>
