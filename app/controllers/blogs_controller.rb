@@ -63,7 +63,7 @@ class BlogsController < ApplicationController
 
   private
     def blogs_params
-      params.require(:blog).permit(:title, :content, :picture)
+      params.require(:blog).permit(:title, :content, :picture, :picture_cache)
     end
 
     def set_blog

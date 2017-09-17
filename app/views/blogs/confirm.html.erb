@@ -3,11 +3,11 @@
     <h3>以下の内容で、送信する。</h3>
 
     <%= form_for(@blog) do |f| %>
-      <%= hidden_field_tag :"cache[picture]",@blog.picture.cache_name %>
+      <%= f.hidden_field_tag :"cache[picture]",@blog.picture.cache_name %>
       <%= f.hidden_field :title %>
       <%= f.hidden_field :content %>
 
-      <p class="post-image"><%= image_tag(@blog.picture_url) %></p>
+      <p class="post-image"><%= image_tag("/uploads/tmp/" + @blog.picture.cache_name) %></p>
       <p>タイトル:<%= @blog.title %></p>
       <p>本文:<%= @blog.content %></p>
       <%= f.submit "登録",class: 'btn btn-primary btn-block' %>
