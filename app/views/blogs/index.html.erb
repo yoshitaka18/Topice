@@ -1,8 +1,8 @@
 <div class="container">
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
     <p><%= notice %></p>
-    <h1>投稿一覧</h1>
-    <%= link_to "写真を投稿する", new_blog_path, class: 'btn btn-default' %>
+    <h1>トピック一覧</h1>
+    <%= link_to "トピックを投稿する", new_blog_path, class: 'btn btn-default' %>
     <% @blogs.each do |blog| %>
     <div class="row">
       <p><%= blog.user.name %>が投稿しました。</p>

@@ -58,6 +58,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
 gem 'rails_12factor', group: :production
+gem 'pusher'
+gem 'fog'
 
 group :development do
   gem 'letter_opener_web'
