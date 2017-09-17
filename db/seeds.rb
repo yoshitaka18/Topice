@@ -5,3 +5,32 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+image_path = File.join(Rails.root, "public/uploads/Seed/sample.jpg")
+50.times do |n|
+  email = Faker::Internet.email
+  name = Faker::Name.name
+  password = "password"
+  title   = Faker::HarryPotter.quote
+  content = Faker::Lorem.paragraph
+
+  @user = User.create(email: email,
+                      name: name,
+                      password: password,
+                      password_confirmation: password,
+                      uid: n,
+                      provider: ""
+                      )
+
+  @blog=Blog.create!(user_id: @user.id,
+                     title: title,
+                     content: content,
+                     picture: File.new(image_path)
+                     #picture: "yamasha17822_DSC1120_TP_V.jpg"
+                     )
+
+  Comment.create!(user_id: @user.id,
+                  blog_id: @blog.id,
+                  content: content
+                  )
+end
+

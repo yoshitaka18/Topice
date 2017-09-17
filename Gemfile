@@ -67,6 +67,7 @@ gem 'pusher'
 gem 'fog'
 gem 'dotenv-rails'
 gem 'unicorn'
+gem 'faker'
 
 group :development do
   gem 'letter_opener_web'
