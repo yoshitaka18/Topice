@@ -3,7 +3,8 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = Blog.all
+    #@blogs = Blog.all
+    @blogs = Blog.page(params[:page])
     respond_to do |format|
       format.html
       format.js

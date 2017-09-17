@@ -68,6 +68,7 @@ gem 'fog'
 gem 'dotenv-rails'
 gem 'unicorn'
 gem 'faker'
+gem 'kaminari'
 
 group :development do
   gem 'letter_opener_web'
