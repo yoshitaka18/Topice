@@ -7,7 +7,7 @@
       <%= f.hidden_field :title %>
       <%= f.hidden_field :content %>
 
-      <p class="post-image"><%= image_tag(@blog.picture.url) %></p>
+      <p class="post-image"><%= image_tag(@blog.picture_url) %></p>
       <p>タイトル:<%= @blog.title %></p>
       <p>本文:<%= @blog.content %></p>
       <%= f.submit "登録",class: 'btn btn-primary btn-block' %>
