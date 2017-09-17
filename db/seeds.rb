@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-image_path = File.join(Rails.root, "public/uploads/Seed/sample.jpg")
+image_path = File.join(Rails.root, "db/Seed/sample.jpg")
 50.times do |n|
   email = Faker::Internet.email
   name = Faker::Name.name
@@ -25,7 +25,6 @@ image_path = File.join(Rails.root, "public/uploads/Seed/sample.jpg")
                      title: title,
                      content: content,
                      picture: File.new(image_path)
-                     #picture: "yamasha17822_DSC1120_TP_V.jpg"
                      )
 
   Comment.create!(user_id: @user.id,
